@@ -7,6 +7,17 @@
     <title>Travel Blog</title>
 </head>
 <body>
-    <h1>Template is working!!</h1>
+    <h1>{{title}} is working!!</h1>
+    <p>
+        {% for obj in object_list %}
+
+        {{ obj.title }}<br/>
+        {{ obj.content }}<br/>
+        {{ obj.timestamp }}<br/>
+        {{ obj.updated }}<br/>
+        {{ obj.id }}<br/>
+
+        {% endfor %}
+    </p>
 </body>
 </html>
