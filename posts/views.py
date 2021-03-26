@@ -13,9 +13,6 @@ def post_create(request):
         #successful post message
         messages.success(request, "Post Successfully Created!")
         return HttpResponseRedirect(instance.get_absolute_url())
-    else:
-        messages.error(request, "Failed To Create Post!")
-
     context = {
         "form":form,
     }
