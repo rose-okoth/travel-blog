@@ -8,7 +8,7 @@
 <div class='col-sm-6 col-sm-offset-3'>
 <h1>{{title}} <small>{{ instance.timestamp }}</small></h1>
     <p>
-        {{ instance.content }}<br/>
+        {{ instance.content | linebreaks}}<br/>
     </p>
 </div>
 {% endblock %}
