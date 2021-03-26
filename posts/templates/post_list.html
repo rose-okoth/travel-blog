@@ -26,6 +26,23 @@
         <!-- {% cycle "" "<div class='col-sm-12'></div></div></div><div class='row'>" %} -->
         {% endfor %}
 
+        <div class='pagination'>
+          <span class='step-links'>
+            {% if object_list.has_previous %}
+              <a href="?page={{ object_list.previous_page_number }}">Newer Posts</a>
+            {% endif %}
+
+            <span class="current">
+              Page{{ object_list.number }} of {{ object_list.paginator.num_pages }}
+            </span>
+
+            {% if object_list.has_next %}
+              <a href="?page={{ object_list.next_page_number }}">Older Posts</a>
+            {% endif %}
+
+          </span>
+        </div>
+
     </div>
 
 {% endblock %}
