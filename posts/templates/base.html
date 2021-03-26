@@ -12,6 +12,8 @@
     </style>
 </head>
 <body>
+
+    {%  if messages %}
     <div class="messages">
         
         <ul class="messages">
@@ -21,24 +23,13 @@
         </ul>
     
     </div>
+    {%  endif %}
 
     <div class="container">
         {% block content %}
-        <h1>{{title}} is working!!</h1>
-            <p>
-                {% for obj in object_list %}
-                <!-- '{{ get_absolute_url }}' -->
-                <!-- {% url "posts:detail" id=obj.id %} -->
-                <a href='{{ obj.get_absolute_url }}'>{{ obj.title }}<br/></a>
-                {{ obj.content }}<br/>
-                {{ obj.timestamp }}<br/>
-                {{ obj.updated }}<br/>
-                {{ obj.id }}<br/>
-
-                {% endfor %}
-            </p>
-        {% endblock %}
         
+        {% endblock %} 
     </div>
+    
 </body>
 </html>
