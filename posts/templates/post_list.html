@@ -8,6 +8,11 @@
 
 <div class ='col-sm-6 col-sm-offset-3'>
     <h1>{{title}}</h1>
+    <form method="GET" action="">
+      <input type="text" name="q" placeholder="Search Posts"/>
+      <input type="submit" value="Search"/>
+
+    </form>
        
         {% for obj in object_list %}
          <div class="row">
