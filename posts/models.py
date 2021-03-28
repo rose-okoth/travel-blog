@@ -1,9 +1,11 @@
 from django.db import models
 from django.urls import reverse
 from django.db.models.signals import pre_save
+from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.conf import settings
 from django.utils import timezone
+from tinymce.models import HTMLField
 
 # Create your models here.
 class PostManager(models.Manager):
@@ -13,8 +15,17 @@ class PostManager(models.Manager):
 def upload_location(instance, filename):
     return "%s/%s" %(instance.id, filename)
 
+class tags(models.Model):
+    '''
+    Class for the tags of the quotes.
+    '''
+    name = models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.name
+
 class Post(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, default=1)
+    user = models.ForeignKey(User,on_delete=models.CASCADE, default=1)
     title = models.CharField(max_length=150)
     slug = models.SlugField(unique=True)
     image = models.ImageField(upload_to=upload_location,
@@ -24,7 +35,8 @@ class Post(models.Model):
             width_field='width_field')
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
-    content = models.TextField()
+    content = HTMLField()
+    tags = models.ManyToManyField(tags)
     draft = models.BooleanField(default=False)
     publish = models.DateField(auto_now=False, auto_now_add=False)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)

@@ -11,3 +11,6 @@ class PostForm(forms.ModelForm):
             "draft",
             "publish",
         ]
+        widgets = {
+            'tags': forms.CheckboxSelectMultiple(),
+        }
