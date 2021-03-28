@@ -6,7 +6,7 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('registration.backends.simple.urls')),
+    # path('accounts/', include('registration.backends.simple.urls')),
     path('posts/', include('posts.urls')),
     path('tinymce/', include('tinymce.urls')),
 ]
