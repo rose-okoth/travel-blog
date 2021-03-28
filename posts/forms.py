@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post 
+from .models import Post
 
 class PostForm(forms.ModelForm):
     class Meta:
@@ -11,6 +11,4 @@ class PostForm(forms.ModelForm):
             "draft",
             "publish",
         ]
-        widgets = {
-            'tags': forms.CheckboxSelectMultiple(),
-        }
+        

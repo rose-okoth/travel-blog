@@ -11,7 +11,6 @@ from .forms import PostForm
 
 # Create your views here.
 
-@login_required(login_url='/accounts/login/')
 def post_create(request):
     if not request.user.is_staff or not request.user.is_superuser:
         raise Http404
@@ -20,15 +19,14 @@ def post_create(request):
         instance = form.save(commit=False)
         instance.user = request.user
         instance.save()
-        #successful post message
-        messages.success(request, "Post Successfully Created!")
+        messages.success(request, "Successfully Created!")
         return HttpResponseRedirect(instance.get_absolute_url())
     context = {
         "form":form,
     }
     return render(request,"post_form.html",context)
 
-@login_required(login_url='/accounts/login/')
+
 def post_detail(request,slug=None):
     instance = get_object_or_404(Post, slug=slug)
     if instance.draft or instance.publish > timezone.now().date():
@@ -80,7 +78,6 @@ def post_list(request):
         }
     return render(request,"post_list.html",context)
 
-@login_required(login_url='/accounts/login/')
 def post_update(request, slug=None):
     if not request.user.is_staff or not request.user.is_superuser:
         raise Http404
@@ -98,7 +95,6 @@ def post_update(request, slug=None):
         }
     return render(request,"post_form.html",context) 
 
-@login_required(login_url='/accounts/login/')
 def post_delete(request, slug=None):
     if not request.user.is_staff or not request.user.is_superuser:
         raise Http404
@@ -106,3 +102,6 @@ def post_delete(request, slug=None):
     instance.delete()
     messages.success(request, "Successfully Deleted!")
     return redirect("posts:list")
+
+
+

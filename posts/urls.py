@@ -10,4 +10,6 @@ urlpatterns = [
     re_path(r'^(?P<slug>[\w-]+)/$', post_detail, name='detail'),
     re_path(r'^(?P<slug>[\w-]+)/edit/$', post_update, name='update'),
     re_path(r'^(?P<slug>[\w-]+)/delete/$', post_delete, name='delete'),
+    # re_path(r'^(?P<slug>[\w-]+)/post$', new_post, name='new-post')
 ]
+print(urlpatterns)
