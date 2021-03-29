@@ -77,7 +77,7 @@ def post_list(request):
 
     context = {
             "object_list":queryset,
-            "title":"List",
+            "title":"Wanderer Posts",
             "page_request_var":page_request_var,
             "today":today,
         }
