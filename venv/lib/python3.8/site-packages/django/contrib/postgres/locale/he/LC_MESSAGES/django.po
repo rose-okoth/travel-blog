@@ -1,13 +1,13 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
-# Meir Kriheli <mkriheli@gmail.com>, 2015
+# Meir Kriheli <mkriheli@gmail.com>, 2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-09 17:42+0200\n"
-"PO-Revision-Date: 2015-11-28 16:23+0000\n"
+"POT-Creation-Date: 2017-01-19 16:49+0100\n"
+"PO-Revision-Date: 2017-09-21 22:44+0000\n"
 "Last-Translator: Meir Kriheli <mkriheli@gmail.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/django/django/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -26,12 +26,12 @@ msgstr "פריט %(nth)s במערך לא עבר בדיקת חוקיות: "
 msgid "Nested arrays must have the same length."
 msgstr "מערכים מקוננים חייבים להיות באותו האורך."
 
-msgid "Map of strings to strings"
-msgstr "מיפוי מחרוזות אל מחרוזות."
+msgid "Map of strings to strings/nulls"
+msgstr "מיפוי מחרוזות אל מחרוזות/nulls."
 
 #, python-format
-msgid "The value of \"%(key)s\" is not a string."
-msgstr "הערך של \"%(key)s\" אינו מחרוזת."
+msgid "The value of \"%(key)s\" is not a string or null."
+msgstr "הערך של \"%(key)s\" אינו מחרוזת או null."
 
 msgid "A JSON object"
 msgstr "אובייקט JSON"
@@ -41,6 +41,9 @@ msgstr "ערך חייב להיות JSON חוקי."
 
 msgid "Could not load JSON data."
 msgstr "לא ניתן לטעון מידע JSON."
+
+msgid "Input must be a JSON dictionary."
+msgstr "הקלט חייב להיות מילון JSON."
 
 #, python-format
 msgid "'%(value)s' value must be valid JSON."

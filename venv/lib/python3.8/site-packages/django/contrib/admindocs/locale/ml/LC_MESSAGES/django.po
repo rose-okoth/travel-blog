@@ -2,13 +2,14 @@
 #
 # Translators:
 # Jannis Leidel <jannis@leidel.info>, 2011
+# Rag sagar <ragsagar@gmail.com>, 2016
 # Rajeesh Nair <rajeeshrnair@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: django\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-10 14:49+0200\n"
-"PO-Revision-Date: 2015-10-11 10:05+0000\n"
+"POT-Creation-Date: 2017-01-19 16:49+0100\n"
+"PO-Revision-Date: 2017-09-19 16:40+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Malayalam (http://www.transifex.com/django/django/language/"
 "ml/)\n"
@@ -121,7 +122,7 @@ msgstr ""
 msgid "Arguments"
 msgstr ""
 
-msgid "Back to Model Documentation"
+msgid "Back to Model documentation"
 msgstr ""
 
 msgid "Model documentation"
@@ -141,6 +142,7 @@ msgstr ""
 msgid "Template: \"%(name)s\""
 msgstr ""
 
+#. Translators: Search is not a verb here, it qualifies path (a search path)
 #, python-format
 msgid "Search path for template \"%(name)s\":"
 msgstr ""
@@ -189,9 +191,9 @@ msgid "Context:"
 msgstr ""
 
 msgid "Templates:"
-msgstr ""
+msgstr "ടെമ്പ്‌ലേറ്റുകള്‍"
 
-msgid "Back to Views Documentation"
+msgid "Back to View documentation"
 msgstr ""
 
 msgid "View documentation"
@@ -216,13 +218,6 @@ msgid ""
 "    View function: <code>%(full_name)s</code>. Name: <code>%(url_name)s</"
 "code>.\n"
 msgstr ""
-
-msgid "Boolean (Either True or False)"
-msgstr "ശരിയോ തെറ്റോ (True അഥവാ False)"
-
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr "%(field_type)s എന്ന തരത്തിലുള്ള കളം (ഫീല്‍ഡ്)"
 
 msgid "tag:"
 msgstr "ടാഗ്:"

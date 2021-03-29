@@ -1,6 +1,9 @@
+from urllib.parse import quote, urljoin
+
 from django import template
+from django.apps import apps
 from django.utils.encoding import iri_to_uri
-from django.utils.six.moves.urllib.parse import urljoin
+from django.utils.html import conditional_escape
 
 register = template.Library()
 
@@ -54,7 +57,7 @@ class PrefixNode(template.Node):
 @register.tag
 def get_static_prefix(parser, token):
     """
-    Populates a template variable with the static prefix,
+    Populate a template variable with the static prefix,
     ``settings.STATIC_URL``.
 
     Usage::
@@ -72,7 +75,7 @@ def get_static_prefix(parser, token):
 @register.tag
 def get_media_prefix(parser, token):
     """
-    Populates a template variable with the media prefix,
+    Populate a template variable with the media prefix,
     ``settings.MEDIA_URL``.
 
     Usage::
@@ -101,6 +104,8 @@ class StaticNode(template.Node):
 
     def render(self, context):
         url = self.url(context)
+        if context.autoescape:
+            url = conditional_escape(url)
         if self.varname is None:
             return url
         context[self.varname] = url
@@ -108,7 +113,11 @@ class StaticNode(template.Node):
 
     @classmethod
     def handle_simple(cls, path):
-        return urljoin(PrefixNode.handle_simple("STATIC_URL"), path)
+        if apps.is_installed('django.contrib.staticfiles'):
+            from django.contrib.staticfiles.storage import staticfiles_storage
+            return staticfiles_storage.url(path)
+        else:
+            return urljoin(PrefixNode.handle_simple("STATIC_URL"), quote(path))
 
     @classmethod
     def handle_token(cls, parser, token):
@@ -134,7 +143,7 @@ class StaticNode(template.Node):
 @register.tag('static')
 def do_static(parser, token):
     """
-    Joins the given path with the STATIC_URL setting.
+    Join the given path with the STATIC_URL setting.
 
     Usage::
 
@@ -151,4 +160,8 @@ def do_static(parser, token):
 
 
 def static(path):
+    """
+    Given a relative path to a static asset, return the absolute path to the
+    asset.
+    """
     return StaticNode.handle_simple(path)

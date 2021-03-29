@@ -3,15 +3,16 @@
 # Translators:
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Juraj Bubniak <translations@jbub.eu>, 2012-2013
-# Marian Andre <marian@andre.sk>, 2013-2015
+# Marian Andre <marian@andre.sk>, 2013-2015,2017
 # Martin Kosír, 2011
+# Martin Tóth <ezimir@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-15 11:06+0100\n"
-"PO-Revision-Date: 2015-11-16 08:16+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2017-01-19 16:49+0100\n"
+"PO-Revision-Date: 2017-09-23 18:54+0000\n"
+"Last-Translator: Marian Andre <marian@andre.sk>\n"
 "Language-Team: Slovak (http://www.transifex.com/django/django/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,6 +65,12 @@ msgstr "Tento mesiac"
 msgid "This year"
 msgstr "Tento rok"
 
+msgid "No date"
+msgstr "Bez dátumu"
+
+msgid "Has date"
+msgstr "S dátumom"
+
 #, python-format
 msgid ""
 "Please enter the correct %(username)s and password for a staff account. Note "
@@ -75,18 +82,27 @@ msgstr ""
 msgid "Action:"
 msgstr "Akcia:"
 
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr "Pridať ďalší %(verbose_name)s"
+
+msgid "Remove"
+msgstr "Odstrániť"
+
 msgid "action time"
 msgstr "čas akcie"
 
 msgid "user"
-msgstr ""
+msgstr "používateľ"
 
 msgid "content type"
-msgstr ""
+msgstr "typ obsahu"
 
 msgid "object id"
 msgstr "identifikátor objektu"
 
+#. Translators: 'repr' means representation
+#. (https://docs.python.org/3/library/functions.html#repr)
 msgid "object repr"
 msgstr "reprezentácia objektu"
 
@@ -108,7 +124,7 @@ msgstr "Pridané \"%(object)s\"."
 
 #, python-format
 msgid "Changed \"%(object)s\" - %(changes)s"
-msgstr "Zmenené \" %(object)s \" - %(changes)s "
+msgstr "Zmenené \"%(object)s\" - %(changes)s "
 
 #, python-format
 msgid "Deleted \"%(object)s.\""
@@ -117,75 +133,77 @@ msgstr "Odstránené \"%(object)s.\""
 msgid "LogEntry Object"
 msgstr "Objekt LogEntry"
 
+#, python-brace-format
+msgid "Added {name} \"{object}\"."
+msgstr "Pridaný {name} \"{object}\"."
+
+msgid "Added."
+msgstr "Pridaný."
+
+msgid "and"
+msgstr "a"
+
+#, python-brace-format
+msgid "Changed {fields} for {name} \"{object}\"."
+msgstr "Zmenený {fields} pre {name} \"{object}\"."
+
+#, python-brace-format
+msgid "Changed {fields}."
+msgstr "Zmenené {fields}."
+
+#, python-brace-format
+msgid "Deleted {name} \"{object}\"."
+msgstr "Zmazaný {name} \"{object}\"."
+
+msgid "No fields changed."
+msgstr "Polia nezmenené."
+
 msgid "None"
 msgstr "Žiadne"
 
 msgid ""
 "Hold down \"Control\", or \"Command\" on a Mac, to select more than one."
 msgstr ""
+"Ak chcete vybrať viac ako jednu položku, podržte \"Control\", alebo \"Command"
+"\" na počítači Mac."
 
-msgid "Added."
-msgstr ""
-
-#, python-format
-msgid "Changed %s."
-msgstr "Zmenené %s."
-
-msgid "and"
-msgstr "a"
-
-#, python-format
-msgid "Added %(name)s \"%(object)s\"."
-msgstr "Pridaný %(name)s \"%(object)s\"."
-
-#, python-format
-msgid "Changed %(list)s for %(name)s \"%(object)s\"."
-msgstr "Zmenený %(list)s pre %(name)s \"%(object)s\"."
-
-#, python-format
-msgid "Deleted %(name)s \"%(object)s\"."
-msgstr "Zmazaný %(name)s \"%(object)s\"."
-
-msgid "No fields changed."
-msgstr "Polia nezmenené."
-
-#, python-format
+#, python-brace-format
 msgid ""
-"The %(name)s \"%(obj)s\" was added successfully. You may edit it again below."
+"The {name} \"{obj}\" was added successfully. You may edit it again below."
 msgstr ""
-"Objekt %(name)s \"%(obj)s\" bol úspešne pridaný. Ďalšie zmeny môžete urobiť "
+"Objekt {name} \"{obj}\" bol úspešne pridaný. Ďalšie zmeny môžete urobiť "
 "nižšie."
 
-#, python-format
+#, python-brace-format
 msgid ""
-"The %(name)s \"%(obj)s\" was added successfully. You may add another "
-"%(name)s below."
-msgstr ""
-"%(name)s \"%(obj)s\" bol úspešne pridaný. Môžete pridať ďaľší %(name)s "
-"nižšie."
-
-#, python-format
-msgid "The %(name)s \"%(obj)s\" was added successfully."
-msgstr "Objekt %(name)s \"%(obj)s\" bol úspešne pridaný."
-
-#, python-format
-msgid ""
-"The %(name)s \"%(obj)s\" was changed successfully. You may edit it again "
+"The {name} \"{obj}\" was added successfully. You may add another {name} "
 "below."
 msgstr ""
-"%(name)s \"%(obj)s\" bol úspešne zmenený. Môžete ho znovu upraviť nižšie."
-
-#, python-format
-msgid ""
-"The %(name)s \"%(obj)s\" was changed successfully. You may add another "
-"%(name)s below."
-msgstr ""
-"%(name)s \"%(obj)s\" bol úspešne zmenený. Môžete pridať ďaľšie %(name)s "
+"Objekt {name} \"{obj}\" bol úspešne pridaný. Môžete pridať ďaľší {name} "
 "nižšie."
 
-#, python-format
-msgid "The %(name)s \"%(obj)s\" was changed successfully."
-msgstr "Objekt %(name)s \"%(obj)s\" bol úspešne zmenený."
+#, python-brace-format
+msgid "The {name} \"{obj}\" was added successfully."
+msgstr "Objekt {name} \"{obj}\" bol úspešne pridaný."
+
+#, python-brace-format
+msgid ""
+"The {name} \"{obj}\" was changed successfully. You may edit it again below."
+msgstr ""
+"Objekt {name} \"{obj}\" bol úspešne zmenený. Ďalšie zmeny môžete urobiť "
+"nižšie."
+
+#, python-brace-format
+msgid ""
+"The {name} \"{obj}\" was changed successfully. You may add another {name} "
+"below."
+msgstr ""
+"Objekt {name} \"{obj}\" bol úspešne pridaný. Môžete pridať ďaľší {name} "
+"nižšie."
+
+#, python-brace-format
+msgid "The {name} \"{obj}\" was changed successfully."
+msgstr "Objekt {name} \"{obj}\" bol úspešne pridaný."
 
 msgid ""
 "Items must be selected in order to perform actions on them. No items have "
@@ -202,8 +220,9 @@ msgid "The %(name)s \"%(obj)s\" was deleted successfully."
 msgstr "Objekt %(name)s \"%(obj)s\" bol úspešne vymazaný."
 
 #, python-format
-msgid "%(name)s object with primary key %(key)r does not exist."
-msgstr "Objekt %(name)s s primárnym kľúčom %(key)r neexistuje."
+msgid "%(name)s with ID \"%(key)s\" doesn't exist. Perhaps it was deleted?"
+msgstr ""
+"Položka %(name)s s ID \"%(key)s\" neexistuje - pravdepodobne je vymazaná?"
 
 #, python-format
 msgid "Add %s"
@@ -336,7 +355,7 @@ msgid "Welcome,"
 msgstr "Vitajte,"
 
 msgid "View site"
-msgstr ""
+msgstr "Pozrieť stránku"
 
 msgid "Documentation"
 msgstr "Dokumentácia"
@@ -344,18 +363,15 @@ msgstr "Dokumentácia"
 msgid "Log out"
 msgstr "Odhlásiť"
 
-msgid "Add"
-msgstr "Pridať"
+#, python-format
+msgid "Add %(name)s"
+msgstr "Pridať %(name)s"
 
 msgid "History"
 msgstr "Zmeny"
 
 msgid "View on site"
 msgstr "Pozrieť na stránke"
-
-#, python-format
-msgid "Add %(name)s"
-msgstr "Pridať %(name)s"
 
 msgid "Filter"
 msgstr "Filtrovať"
@@ -406,7 +422,7 @@ msgid "Yes, I'm sure"
 msgstr "Áno, som si istý"
 
 msgid "No, take me back"
-msgstr ""
+msgstr "Nie, chcem sa vrátiť"
 
 msgid "Delete multiple objects"
 msgstr "Zmazať viacero objektov"
@@ -440,13 +456,6 @@ msgstr ""
 msgid "Change"
 msgstr "Zmeniť"
 
-msgid "Remove"
-msgstr "Odstrániť"
-
-#, python-format
-msgid "Add another %(verbose_name)s"
-msgstr "Pridať ďalší %(verbose_name)s"
-
 msgid "Delete?"
 msgstr "Zmazať?"
 
@@ -455,19 +464,22 @@ msgid " By %(filter_title)s "
 msgstr "Podľa %(filter_title)s "
 
 msgid "Summary"
-msgstr ""
+msgstr "Súhrn"
 
 #, python-format
 msgid "Models in the %(name)s application"
 msgstr "Modely v %(name)s aplikácii"
 
+msgid "Add"
+msgstr "Pridať"
+
 msgid "You don't have permission to edit anything."
 msgstr "Nemáte právo na vykonávanie zmien."
 
-msgid "Recent Actions"
+msgid "Recent actions"
 msgstr "Posledné akcie"
 
-msgid "My Actions"
+msgid "My actions"
 msgstr "Moje akcie"
 
 msgid "None available"
@@ -490,6 +502,8 @@ msgid ""
 "You are authenticated as %(username)s, but are not authorized to access this "
 "page. Would you like to login to a different account?"
 msgstr ""
+"Ste prihlásený ako %(username)s, ale nemáte práva k tejto stránke. Chcete sa "
+"prihlásiť do iného účtu?"
 
 msgid "Forgotten your password or username?"
 msgstr "Zabudli ste heslo alebo používateľské meno?"
@@ -517,7 +531,7 @@ msgid "Save"
 msgstr "Uložiť"
 
 msgid "Popup closing..."
-msgstr ""
+msgstr "Vyskakovacie okno sa zatvára..."
 
 #, python-format
 msgid "Change selected %(model)s"
@@ -525,7 +539,7 @@ msgstr "Zmeniť vybrané %(model)s"
 
 #, python-format
 msgid "Add another %(model)s"
-msgstr ""
+msgstr "Pridať ďalší %(model)s"
 
 #, python-format
 msgid "Delete selected %(model)s"

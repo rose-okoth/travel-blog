@@ -2,13 +2,15 @@
 #
 # Translators:
 # aljosa <aljosa.mohorovic@gmail.com>, 2012
+# Filip Cuk <filipcuk2@gmail.com>, 2016
 # Jannis Leidel <jannis@leidel.info>, 2011
+# Mislav Cimperšak <mislav.cimpersak@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-10 14:49+0200\n"
-"PO-Revision-Date: 2015-10-11 10:05+0000\n"
+"POT-Creation-Date: 2017-01-19 16:49+0100\n"
+"PO-Revision-Date: 2017-09-19 16:40+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Croatian (http://www.transifex.com/django/django/language/"
 "hr/)\n"
@@ -20,7 +22,7 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 msgid "Administrative Documentation"
-msgstr ""
+msgstr "Administrativna dokumentacija"
 
 msgid "Home"
 msgstr "Početna"
@@ -86,7 +88,7 @@ msgid "Tools for your browser to quickly access admin functionality."
 msgstr ""
 
 msgid "Please install docutils"
-msgstr ""
+msgstr "Molimo instalirajte docutils"
 
 #, python-format
 msgid ""
@@ -104,16 +106,16 @@ msgid "Model: %(name)s"
 msgstr ""
 
 msgid "Fields"
-msgstr ""
+msgstr "Polja"
 
 msgid "Field"
-msgstr ""
+msgstr "Polje"
 
 msgid "Type"
 msgstr ""
 
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 msgid "Methods with arguments"
 msgstr ""
@@ -124,7 +126,7 @@ msgstr ""
 msgid "Arguments"
 msgstr ""
 
-msgid "Back to Model Documentation"
+msgid "Back to Model documentation"
 msgstr ""
 
 msgid "Model documentation"
@@ -138,21 +140,22 @@ msgstr "Predlošci"
 
 #, python-format
 msgid "Template: %(name)s"
-msgstr ""
+msgstr "Predložak: %(name)s"
 
 #, python-format
 msgid "Template: \"%(name)s\""
-msgstr ""
+msgstr "Predložak: \"%(name)s\""
 
+#. Translators: Search is not a verb here, it qualifies path (a search path)
 #, python-format
 msgid "Search path for template \"%(name)s\":"
 msgstr ""
 
 msgid "(does not exist)"
-msgstr ""
+msgstr "(ne postoji)"
 
 msgid "Back to Documentation"
-msgstr ""
+msgstr "Povratak na dokumentaciju"
 
 msgid "Template filters"
 msgstr ""
@@ -192,9 +195,9 @@ msgid "Context:"
 msgstr ""
 
 msgid "Templates:"
-msgstr ""
+msgstr "Predlošci:"
 
-msgid "Back to Views Documentation"
+msgid "Back to View documentation"
 msgstr ""
 
 msgid "View documentation"
@@ -220,13 +223,6 @@ msgid ""
 "code>.\n"
 msgstr ""
 
-msgid "Boolean (Either True or False)"
-msgstr "Boolean (True ili False)"
-
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr "Polje tipa: %(field_type)s"
-
 msgid "tag:"
 msgstr "tag:"
 
@@ -238,7 +234,7 @@ msgstr "prikaz:"
 
 #, python-format
 msgid "App %(app_label)r not found"
-msgstr ""
+msgstr "Aplikacija %(app_label)r nije pronađena"
 
 #, python-format
 msgid "Model %(model_name)r not found in app %(app_label)r"

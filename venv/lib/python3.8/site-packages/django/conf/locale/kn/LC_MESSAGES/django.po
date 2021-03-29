@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-09 17:42+0200\n"
-"PO-Revision-Date: 2015-11-27 09:35+0000\n"
+"POT-Creation-Date: 2017-11-15 16:15+0100\n"
+"PO-Revision-Date: 2017-11-16 01:13+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Kannada (http://www.transifex.com/django/django/language/"
 "kn/)\n"
@@ -60,6 +60,9 @@ msgstr "ಡ್ಯಾನಿಷ್"
 
 msgid "German"
 msgstr "ಜರ್ಮನ್"
+
+msgid "Lower Sorbian"
+msgstr ""
 
 msgid "Greek"
 msgstr "ಗ್ರೀಕ್"
@@ -130,6 +133,9 @@ msgstr "ಹಿಂದಿ"
 msgid "Croatian"
 msgstr "ಕ್ರೊಯೇಶಿಯನ್"
 
+msgid "Upper Sorbian"
+msgstr ""
+
 msgid "Hungarian"
 msgstr "ಹಂಗೇರಿಯನ್"
 
@@ -190,8 +196,8 @@ msgstr ""
 msgid "Burmese"
 msgstr ""
 
-msgid "Norwegian Bokmal"
-msgstr "ನಾರ್ವೇಜಿಯನ್ ಬೋಕ್ಮಲ್"
+msgid "Norwegian Bokmål"
+msgstr ""
 
 msgid "Nepali"
 msgstr ""
@@ -289,7 +295,13 @@ msgstr ""
 msgid "Syndication"
 msgstr ""
 
-msgid "Web Design"
+msgid "That page number is not an integer"
+msgstr ""
+
+msgid "That page number is less than 1"
+msgstr ""
+
+msgid "That page contains no results"
 msgstr ""
 
 msgid "Enter a valid value."
@@ -304,6 +316,7 @@ msgstr ""
 msgid "Enter a valid email address."
 msgstr ""
 
+#. Translators: "letters" means latin letters: a-z and A-Z.
 msgid ""
 "Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
 msgstr ""
@@ -379,6 +392,15 @@ msgid_plural ""
 "Ensure that there are no more than %(max)s digits before the decimal point."
 msgstr[0] ""
 
+#, python-format
+msgid ""
+"File extension '%(extension)s' is not allowed. Allowed extensions are: "
+"'%(allowed_extensions)s'."
+msgstr ""
+
+msgid "Null characters are not allowed."
+msgstr ""
+
 msgid "and"
 msgstr "ಮತ್ತು"
 
@@ -418,6 +440,9 @@ msgstr "ಪೂರ್ಣಾಂಕ"
 #, python-format
 msgid "'%(value)s' value must be an integer."
 msgstr ""
+
+msgid "Big (8 byte) integer"
+msgstr "ಬೃಹತ್ (೮ ಬೈಟ್) ಪೂರ್ಣ ಸಂಖ್ಯೆ"
 
 #, python-format
 msgid "'%(value)s' value must be either True or False."
@@ -492,9 +517,6 @@ msgstr ""
 msgid "Floating point number"
 msgstr "ತೇಲುವ-ಬಿಂದು ಸಂಖ್ಯೆ"
 
-msgid "Big (8 byte) integer"
-msgstr "ಬೃಹತ್ (೮ ಬೈಟ್) ಪೂರ್ಣ ಸಂಖ್ಯೆ"
-
 msgid "IPv4 address"
 msgstr "IPv4 ವಿಳಾಸ"
 
@@ -564,6 +586,14 @@ msgstr "ಬಾಹ್ಯ ಕೀಲಿ (ಸಂಬಂಧಿತ ಸ್ಥಳದಿ�
 
 msgid "One-to-one relationship"
 msgstr "ಒನ್-ಟು-ಒನ್ (ಪರಸ್ಪರ) ಸಂಬಂಧ"
+
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
 
 msgid "Many-to-many relationship"
 msgstr "ಮೆನಿ-ಟು-ಮೆನಿ (ಸಾರ್ವಜನಿಕ) ಸಂಬಂಧ"
@@ -685,14 +715,14 @@ msgstr ""
 msgid "Please correct the duplicate values below."
 msgstr "ದಯವಿಟ್ಟು ಈ ಕೆಳಗೆ ಎರಡು ಬಾರಿ ನಮೂದಿಸಲಾದ ಮೌಲ್ಯವನ್ನು ಸರಿಪಡಿಸಿ."
 
-msgid "The inline foreign key did not match the parent instance primary key."
-msgstr "ಸಾಲಿನೊಳಗಿನ ಪ್ರಾಥಮಿಕ ಕೀಲಿಯು ಮೂಲ ಇನ್‌ಸ್ಟನ್ಸ್‍ ಪ್ರಾಥಮಿಕ ಕೀಲಿಗೆ ತಾಳೆಯಾಗುತ್ತಿಲ್ಲ."
+msgid "The inline value did not match the parent instance."
+msgstr ""
 
 msgid "Select a valid choice. That choice is not one of the available choices."
 msgstr "ಸರಿಯಾದ ಒಂದು ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ. ಆ ಆಯ್ಕೆಯು ಲಭ್ಯವಿರುವ ಆಯ್ಕೆಗಳಲ್ಲಿ ಇಲ್ಲ."
 
 #, python-format
-msgid "\"%(pk)s\" is not a valid value for a primary key."
+msgid "\"%(pk)s\" is not a valid value."
 msgstr ""
 
 #, python-format
@@ -701,14 +731,14 @@ msgid ""
 "may be ambiguous or it may not exist."
 msgstr ""
 
+msgid "Clear"
+msgstr "ಮುಕ್ತಗೊಳಿಸು"
+
 msgid "Currently"
 msgstr "ಪ್ರಸಕ್ತ"
 
 msgid "Change"
 msgstr "ಬದಲಾವಣೆ"
-
-msgid "Clear"
-msgstr "ಮುಕ್ತಗೊಳಿಸು"
 
 msgid "Unknown"
 msgstr "ಗೊತ್ತಿರದ"
@@ -1043,6 +1073,14 @@ msgid ""
 msgstr ""
 
 msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the 'Referrer-Policy: no-referrer' header, please remove them. The "
+"CSRF protection requires the 'Referer' header to do strict referer checking. "
+"If you're concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" ...> for links to third-party sites."
+msgstr ""
+
+msgid ""
 "You are seeing this message because this site requires a CSRF cookie when "
 "submitting forms. This cookie is required for security reasons, to ensure "
 "that your browser is not being hijacked by third parties."
@@ -1056,27 +1094,11 @@ msgstr ""
 msgid "More information is available with DEBUG=True."
 msgstr ""
 
-msgid "Welcome to Django"
-msgstr ""
-
-msgid "It worked!"
-msgstr ""
-
-msgid "Congratulations on your first Django-powered page."
-msgstr ""
-
-msgid ""
-"Of course, you haven't actually done any work yet. Next, start your first "
-"app by running <code>python manage.py startapp [app_label]</code>."
-msgstr ""
-
-msgid ""
-"You're seeing this message because you have <code>DEBUG = True</code> in "
-"your Django settings file and you haven't configured any URLs. Get to work!"
-msgstr ""
-
 msgid "No year specified"
 msgstr "ಯಾವುದೆ ವರ್ಷವನ್ನು ಸೂಚಿಲಾಗಿಲ್ಲ"
+
+msgid "Date out of range"
+msgstr ""
 
 msgid "No month specified"
 msgstr "ಯಾವುದೆ ತಿಂಗಳನ್ನು ಸೂಚಿಸಲಾಗಿಲ್ಲ"
@@ -1129,4 +1151,42 @@ msgstr ""
 
 #, python-format
 msgid "Index of %(directory)s"
+msgstr ""
+
+msgid "Django: the Web framework for perfectionists with deadlines."
+msgstr ""
+
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+msgid "Django Documentation"
+msgstr ""
+
+msgid "Topics, references, &amp; how-to's"
+msgstr ""
+
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+msgid "Get started with Django"
+msgstr ""
+
+msgid "Django Community"
+msgstr ""
+
+msgid "Connect, get help, or contribute"
 msgstr ""

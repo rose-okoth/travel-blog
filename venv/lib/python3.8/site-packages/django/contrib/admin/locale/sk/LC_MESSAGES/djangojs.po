@@ -6,13 +6,14 @@
 # Juraj Bubniak <translations@jbub.eu>, 2012
 # Marian Andre <marian@andre.sk>, 2012,2015
 # Martin Kosír, 2011
+# Martin Tóth <ezimir@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-09 17:42+0200\n"
-"PO-Revision-Date: 2015-10-10 08:16+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2016-05-17 23:12+0200\n"
+"PO-Revision-Date: 2017-09-23 18:54+0000\n"
+"Last-Translator: Marian Andre <marian@andre.sk>\n"
 "Language-Team: Slovak (http://www.transifex.com/django/django/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -118,7 +119,7 @@ msgid "Now"
 msgstr "Teraz"
 
 msgid "Choose a Time"
-msgstr ""
+msgstr "Vybrať Čas"
 
 msgid "Choose a time"
 msgstr "Vybrať čas"
@@ -133,7 +134,7 @@ msgid "Noon"
 msgstr "Poludnie"
 
 msgid "6 p.m."
-msgstr ""
+msgstr "18:00"
 
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -142,7 +143,7 @@ msgid "Today"
 msgstr "Dnes"
 
 msgid "Choose a Date"
-msgstr ""
+msgstr "Vybrať Dátum"
 
 msgid "Yesterday"
 msgstr "Včera"
@@ -150,15 +151,69 @@ msgstr "Včera"
 msgid "Tomorrow"
 msgstr "Zajtra"
 
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr ""
-"január február marec apríl máj jún júl august september október november "
-"december"
+msgid "January"
+msgstr "január"
 
-msgid "S M T W T F S"
-msgstr "N P U S Š P S"
+msgid "February"
+msgstr "február"
+
+msgid "March"
+msgstr "marec"
+
+msgid "April"
+msgstr "apríl"
+
+msgid "May"
+msgstr "máj"
+
+msgid "June"
+msgstr "jún"
+
+msgid "July"
+msgstr "júl"
+
+msgid "August"
+msgstr "august"
+
+msgid "September"
+msgstr "september"
+
+msgid "October"
+msgstr "október"
+
+msgid "November"
+msgstr "november"
+
+msgid "December"
+msgstr "december"
+
+msgctxt "one letter Sunday"
+msgid "S"
+msgstr "N"
+
+msgctxt "one letter Monday"
+msgid "M"
+msgstr "P"
+
+msgctxt "one letter Tuesday"
+msgid "T"
+msgstr "U"
+
+msgctxt "one letter Wednesday"
+msgid "W"
+msgstr "S"
+
+msgctxt "one letter Thursday"
+msgid "T"
+msgstr "Š"
+
+msgctxt "one letter Friday"
+msgid "F"
+msgstr "P"
+
+msgctxt "one letter Saturday"
+msgid "S"
+msgstr "S"
 
 msgid "Show"
 msgstr "Zobraziť"

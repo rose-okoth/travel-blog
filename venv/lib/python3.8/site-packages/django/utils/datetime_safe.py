@@ -51,6 +51,7 @@ def new_datetime(d):
         kw.extend([d.hour, d.minute, d.second, d.microsecond, d.tzinfo])
     return datetime(*kw)
 
+
 # This library does not support strftime's "%s" or "%y" format strings.
 # Allowed if there's an even number of "%"s because they are escaped.
 _illegal_formatting = re.compile(r"((^|[^%])(%%)*%[sy])")
@@ -60,12 +61,12 @@ def _findall(text, substr):
     # Also finds overlaps
     sites = []
     i = 0
-    while 1:
-        j = text.find(substr, i)
-        if j == -1:
+    while True:
+        i = text.find(substr, i)
+        if i == -1:
             break
-        sites.append(j)
-        i = j + 1
+        sites.append(i)
+        i += 1
     return sites
 
 

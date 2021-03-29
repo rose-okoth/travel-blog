@@ -11,7 +11,7 @@ from .views import (
     post_logout,
 )
 
-appname = 'posts'
+app_name = 'posts'
 
 urlpatterns = [
     url(r'^$', post_list, name = "home"),

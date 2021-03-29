@@ -3,16 +3,18 @@
 # Translators:
 # Oleksandr Chernihov <o.chernihov@gmail.com>, 2014
 # Andriy Sokolovskiy <me@asokolovskiy.com>, 2015
+# Денис Подлесный <haos616@gmail.com>, 2016
 # Jannis Leidel <jannis@leidel.info>, 2011
+# Kirill Gagarski <gagarin.gtn@gmail.com>, 2016
 # Max V. Stotsky <transifex@ms.pereslavl.ru>, 2014
 # Sergey Lysach <sergikoff88@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: django\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-10 14:49+0200\n"
-"PO-Revision-Date: 2015-10-16 08:34+0000\n"
-"Last-Translator: Andriy Sokolovskiy <me@asokolovskiy.com>\n"
+"POT-Creation-Date: 2017-01-19 16:49+0100\n"
+"PO-Revision-Date: 2017-09-19 16:40+0000\n"
+"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/django/django/language/"
 "uk/)\n"
 "MIME-Version: 1.0\n"
@@ -42,6 +44,9 @@ msgid ""
 "click the link and add it to your bookmarks. Now you can select the "
 "bookmarklet from any page in the site."
 msgstr ""
+"Щоб встановити bookmarklets, перетягніть посилання на вашу bookmarklets або "
+"клацніть правою кнопкою миші по посиланню і додайте його в bookmarklets. "
+"Тепер ви можете вибрати bookmarklets з будь-якої сторінки сайту."
 
 msgid "Documentation for this page"
 msgstr "Документація для цієї сторінки"
@@ -50,8 +55,8 @@ msgid ""
 "Jumps you from any page to the documentation for the view that generates "
 "that page."
 msgstr ""
-"Перекидає вас з будь-якої сторінки в документацію для функції, що "
-"сгенерувала цю сторінку."
+"Перекидає вас з будь-якої сторінки в документацію для відображення, що "
+"сгенерувало цю сторінку."
 
 msgid "Tags"
 msgstr "Теги"
@@ -89,6 +94,9 @@ msgid ""
 "template is used to generate the page and which objects are available to "
 "that template."
 msgstr ""
+"Кожна сторінка для відкритого сайту створена за допомогою відображення."
+"Відображення визначає, який шаблон використовується для генерації сторінки "
+"та об'єкти, які доступні для цього шаблону."
 
 msgid "Tools for your browser to quickly access admin functionality."
 msgstr ""
@@ -138,8 +146,8 @@ msgstr "Метод"
 msgid "Arguments"
 msgstr "Аргументи"
 
-msgid "Back to Model Documentation"
-msgstr "Назад до документації моделі"
+msgid "Back to Model documentation"
+msgstr "Назад до Документація моделі"
 
 msgid "Model documentation"
 msgstr "Документація моделі"
@@ -158,6 +166,7 @@ msgstr "Шаблон: %(name)s"
 msgid "Template: \"%(name)s\""
 msgstr "Шаблон: «%(name)s»"
 
+#. Translators: Search is not a verb here, it qualifies path (a search path)
 #, python-format
 msgid "Search path for template \"%(name)s\":"
 msgstr "Шляхи для пошуку шаблону «%(name)s»:"
@@ -212,8 +221,8 @@ msgstr "Контекст:"
 msgid "Templates:"
 msgstr "Шаблони:"
 
-msgid "Back to Views Documentation"
-msgstr "Назад до Документації Відображень"
+msgid "Back to View documentation"
+msgstr "Назад до Переглянути документацію"
 
 msgid "View documentation"
 msgstr "Переглянути документацію"
@@ -226,10 +235,10 @@ msgstr "Порожня іменована зона"
 
 #, python-format
 msgid "Views by namespace %(name)s"
-msgstr ""
+msgstr "Відображення у просторі імен %(name)s"
 
 msgid "Views by empty namespace"
-msgstr ""
+msgstr "Відображення у глобальному просторі імен "
 
 #, python-format
 msgid ""
@@ -237,13 +246,9 @@ msgid ""
 "    View function: <code>%(full_name)s</code>. Name: <code>%(url_name)s</"
 "code>.\n"
 msgstr ""
-
-msgid "Boolean (Either True or False)"
-msgstr "Булеве значення (True або False)"
-
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr "Тип поля: %(field_type)s"
+"\n"
+"Функція відображення: <code>%(full_name)s</code>. Им'я: <code>%(url_name)s</"
+"code>.\n"
 
 msgid "tag:"
 msgstr "тег:"

@@ -5,8 +5,8 @@ from django.db import DEFAULT_DB_ALIAS, connections
 def add_srs_entry(srs, auth_name='EPSG', auth_srid=None, ref_sys_name=None,
                   database=None):
     """
-    This function takes a GDAL SpatialReference system and adds its information
-    to the `spatial_ref_sys` table of the spatial backend.  Doing this enables
+    Take a GDAL SpatialReference system and add its information to the
+    `spatial_ref_sys` table of the spatial backend. Doing this enables
     database-level spatial transformations for the backend.  Thus, this utility
     is useful for adding spatial reference systems not included by default with
     the backend:
@@ -32,8 +32,7 @@ def add_srs_entry(srs, auth_name='EPSG', auth_srid=None, ref_sys_name=None,
       of `django.db.DEFAULT_DB_ALIAS` (at the time of this writing, its value
       is 'default').
     """
-    if not database:
-        database = DEFAULT_DB_ALIAS
+    database = database or DEFAULT_DB_ALIAS
     connection = connections[database]
 
     if not hasattr(connection.ops, 'spatial_version'):
@@ -65,7 +64,7 @@ def add_srs_entry(srs, auth_name='EPSG', auth_srid=None, ref_sys_name=None,
     if 'srtext' in srs_field_names:
         kwargs['srtext'] = srs.wkt
     if 'ref_sys_name' in srs_field_names:
-        # Spatialite specific
+        # SpatiaLite specific
         kwargs['ref_sys_name'] = ref_sys_name or srs.name
 
     # Creating the spatial_ref_sys model.
@@ -75,6 +74,3 @@ def add_srs_entry(srs, auth_name='EPSG', auth_srid=None, ref_sys_name=None,
         SpatialRefSys.objects.using(database).get(srid=srs.srid)
     except SpatialRefSys.DoesNotExist:
         SpatialRefSys.objects.using(database).create(**kwargs)
-
-# Alias is for backwards-compatibility purposes.
-add_postgis_srs = add_srs_entry

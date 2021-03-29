@@ -1,17 +1,16 @@
-from django.apps import apps
+import warnings
+
 from django.template import Library
+from django.templatetags.static import static as _static
+from django.utils.deprecation import RemovedInDjango30Warning
 
 register = Library()
-
-_static = None
 
 
 @register.simple_tag
 def static(path):
-    global _static
-    if _static is None:
-        if apps.is_installed('django.contrib.staticfiles'):
-            from django.contrib.staticfiles.templatetags.staticfiles import static as _static
-        else:
-            from django.templatetags.static import static as _static
+    warnings.warn(
+        '{% load admin_static %} is deprecated in favor of {% load static %}.',
+        RemovedInDjango30Warning,
+    )
     return _static(path)

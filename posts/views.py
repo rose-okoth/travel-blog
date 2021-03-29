@@ -33,10 +33,9 @@ def post_create(request):
 @login_required()
 def post_detail(request,slug=None):
     instance = get_object_or_404(Post, slug=slug)
-    # import pdb;pdb.set_trace()
-    if instance.draft or instance.publish > datetime.datetime.now(timezone.utc):
-        if not request.user.is_staff or not request.user.is_superuser:
-            raise Http404
+    # if instance.draft or instance.publish > datetime.datetime.now(timezone.utc):
+    #     # if not request.user.is_staff or not request.user.is_superuser:
+    #         raise Http404
     share_string = quote_plus(instance.content)
     context = {
             "title":instance.title,
@@ -50,8 +49,8 @@ def post_list(request):
     today = timezone.now().date()
     # queryset_list = Post.objects.filter(draft=False).filter(publish__lte=timezone.now())
     queryset_list = Post.objects.active().order_by("-timestamp")
-    if request.user.is_staff or request.user.is_superuser:
-        queryset_list = Post.objects.all()
+    # if request.user.is_staff or request.user.is_superuser:
+    queryset_list = Post.objects.all()
 
     query = request.GET.get("q")
     if query:
@@ -85,8 +84,8 @@ def post_list(request):
 
 @login_required()
 def post_update(request, slug=None):
-    if not request.user.is_staff or not request.user.is_superuser:
-        raise Http404
+    # if not request.user.is_staff or not request.user.is_superuser:
+    #     raise Http404
     instance = get_object_or_404(Post, slug=slug)
     form = PostForm(request.POST or None, request.FILES or None, instance=instance)
     if form.is_valid():
@@ -103,8 +102,8 @@ def post_update(request, slug=None):
 
 @login_required()
 def post_delete(request, slug=None):
-    if not request.user.is_staff or not request.user.is_superuser:
-        raise Http404
+    # if not request.user.is_staff or not request.user.is_superuser:
+    #     raise Http404
     instance = get_object_or_404(Post, slug=slug)
     instance.delete()
     messages.success(request, "Successfully Deleted!")
