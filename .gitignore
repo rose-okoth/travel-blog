@@ -4,3 +4,80 @@ venv/
 
  <button type="button"> <a href="{% url 'posts:update' %}" class ="btn btn-success">Edit</a></button>
                   <button type="button"> <a href="{% url 'posts:delete' %}" class ="btn btn-danger">Delete</a></button>
+
+
+<div class="container-fluid">
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+  
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <div class="col-sm-4 col-md-4 navbar-right">
+
+
+          <div class="input-group">
+            <form method="GET" action="">
+              <input type="text" name="q" placeholder="Search Posts" value="{{ request.GET.q }}"/>
+              <input type="submit" value="Search"/>             
+            </form>
+          </div>
+
+      </form>
+  </div>
+  
+
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="{% url 'posts:home' %}">Home</a></li>
+
+      {% if user.is_authenticated %}
+
+            <li>
+              <a href="{% url 'posts:create' %}">Create Post</a>
+            </li>
+            <li>
+              <a href="{% url 'posts:logout' %}">Logout</a>
+            </li>
+        
+      </ul>
+      {% else %}
+      <li>
+        <a href="{% url 'posts:signin' %}">Login</a>
+      </li>
+      
+      <li>
+        <a href="{% url 'posts:signup' %}">Sign Up</a>
+      </li>
+      {% endif %}
+    </ul>
+
+  
+  </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Background image -->
+  <div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80');
+      height: 600px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  >
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">THE WANDERER BLOG</h1>
+          <h4 class="mb-3">A Place For Every Wanderer At Heart To Share With Fellow Wanderers</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+</header>
+</div>
