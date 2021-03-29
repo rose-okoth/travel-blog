@@ -6,7 +6,7 @@ h4 {
 }
 
 h2 {
-    color: #fff);
+    color: #fff;
 }
 
 
@@ -57,7 +57,7 @@ a{
   left:0;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0); backface-visibility: hidden;
-  scale(1.0, 1.0);
+  scale:(1.0, 1.0);
     transform: translateZ(0);
   background:#1B2030 url(https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80) 50% 0 no-repeat;
   background-size:100%;
@@ -67,7 +67,7 @@ a{
   z-index:-2
 }
 .header a{
-  color:#eee
+  color:#eee;
 }
 .menu{
   display:block;
