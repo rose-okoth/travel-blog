@@ -12,7 +12,7 @@ This an app where users who love to travel can blog about places they've been to
 ​
 # Screenshots
 
-![Alt text](/static/images/Screenshot from 2021-03-29 20-46-33.png "Landing Page")
+![Alt text](/static/images/Screenshot.png?raw=true "Landing Page")
 
 # BDD
 
