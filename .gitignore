@@ -1,3 +1,6 @@
-virtual/
+venv/
 .env
-.db.sqlite3
+
+
+ <button type="button"> <a href="{% url 'posts:update' %}" class ="btn btn-success">Edit</a></button>
+                  <button type="button"> <a href="{% url 'posts:delete' %}" class ="btn btn-danger">Delete</a></button>
