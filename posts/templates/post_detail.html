@@ -7,14 +7,16 @@
 
 {% block content %}
 <div class='col-sm-6 col-sm-offset-3'>
-    or
-    {{ instance.image }}
+    <br\><br\><br\><br\>
+    <h1>{{instance.title}}</h1>
+    <!-- or
+    {{ instance.image }} -->
     {% if instance.image %}
     <img src='{{ instance.image.url }}' class='img-responsive'/>
     {% endif %}
 
 <h1>
-    {{title}} <br\> 
+    <!-- {{title}} <br\>  -->
     <small>
         {% if instance.draft %} 
             <span style="color:red;">Draft</span>

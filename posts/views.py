@@ -108,7 +108,7 @@ def post_delete(request, slug=None):
     instance = get_object_or_404(Post, slug=slug)
     instance.delete()
     messages.success(request, "Successfully Deleted!")
-    return redirect("posts:list")
+    return redirect("posts:home")
 
 def post_signup(request):
     if request.method == 'POST':

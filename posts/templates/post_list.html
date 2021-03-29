@@ -29,7 +29,10 @@
                   <p>Author: {{ obj.user.get_full_name }}</p>
                   {% endif %}
                   <p>{{ obj.content | linebreaks | truncatechars:120 }}</p>
-                  <p><a href='{{ obj.get_absolute_url }}' class="btn btn-primary" role="button">View</a></p>
+                  <!-- <p><a href='{{ obj.get_absolute_url }}' class="btn btn-primary" role="button">View</a></p> -->
+                  
+                  <button type="button"> <a href='{{ obj.get_absolute_url }}' class ="btn btn-info">Read More</a></button>
+                 
                 </div>
               </div>
             </div>
