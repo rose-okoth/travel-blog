@@ -14,6 +14,8 @@ This an app where users who love to travel can blog about places they've been to
 
 ![Alt text](/static/images/Screenshot.png?raw=true "Landing Page")
 
+![Alt text](/static/images/Screenshot-1.png?raw=true "Blog Post")
+
 # BDD
 
 * Users should be able to:
