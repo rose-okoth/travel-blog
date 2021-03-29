@@ -133,10 +133,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 
 
-
-
 EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
 EMAIL_HOST_USER='schoolprojcts3@gmail.com'
 EMAIL_HOST_PASSWORD='m3stravaill3s'
+
+LOGIN_URL='/posts/signin/'

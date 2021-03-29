@@ -7,13 +7,13 @@ from django.utils import timezone
 from django.contrib import messages
 from .models import Post
 from .forms import PostForm, RegistrationForm
-from django.contrib.auth import authenticate, logout
+from django.contrib.auth import authenticate, logout,login
 from .email import send_welcome_email
 import datetime
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-@login_required(login_url='/posts/signin/')
+@login_required()
 def post_create(request):
     # if not request.user.is_staff or not request.user.is_superuser:
     #     raise Http404
@@ -30,12 +30,13 @@ def post_create(request):
     }
     return render(request,"post_form.html",context)
 
-@login_required(login_url='/posts/signin/')
+@login_required()
 def post_detail(request,slug=None):
     instance = get_object_or_404(Post, slug=slug)
-    # if instance.draft or instance.publish > datetime.datetime.now():
-    #     if not request.user.is_staff or not request.user.is_superuser:
-    #         raise Http404
+    # import pdb;pdb.set_trace()
+    if instance.draft or instance.publish > datetime.datetime.now(timezone.utc):
+        if not request.user.is_staff or not request.user.is_superuser:
+            raise Http404
     share_string = quote_plus(instance.content)
     context = {
             "title":instance.title,
@@ -82,7 +83,7 @@ def post_list(request):
         }
     return render(request,"post_list.html", context)
 
-@login_required(login_url='/posts/signin/')
+@login_required()
 def post_update(request, slug=None):
     if not request.user.is_staff or not request.user.is_superuser:
         raise Http404
@@ -100,7 +101,7 @@ def post_update(request, slug=None):
         }
     return render(request,"post_form.html",context) 
 
-@login_required(login_url='/posts/signin/')
+@login_required()
 def post_delete(request, slug=None):
     if not request.user.is_staff or not request.user.is_superuser:
         raise Http404
@@ -145,9 +146,10 @@ def post_signin(request):
         if user is not None:
             if user.is_active:
 
-                # login(request, user)
+                login(request, user)
                 return redirect('posts:home')
             else:
+                # login(request, user)
                 return render(request, 'login.html', {"error": "Your account id is not active"})
 
         else:

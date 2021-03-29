@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-body">
             <h3 class="text-center">Sign in</h3>
-            <form action="" method="POST">
+            <form action="{% url 'posts:signin' %}" method="POST">
                 {% csrf_token %}
                 
                 <label for="username">Username</label>
