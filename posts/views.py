@@ -13,7 +13,7 @@ import datetime
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-@login_required()
+@login_required(login_url='posts:signin')
 def post_create(request):
     # if not request.user.is_staff or not request.user.is_superuser:
     #     raise Http404
@@ -30,12 +30,9 @@ def post_create(request):
     }
     return render(request,"post_form.html",context)
 
-@login_required()
+@login_required(login_url='posts:signin')
 def post_detail(request,slug=None):
     instance = get_object_or_404(Post, slug=slug)
-    # if instance.draft or instance.publish > datetime.datetime.now(timezone.utc):
-    #     # if not request.user.is_staff or not request.user.is_superuser:
-    #         raise Http404
     share_string = quote_plus(instance.content)
     context = {
             "title":instance.title,
@@ -82,7 +79,7 @@ def post_list(request):
         }
     return render(request,"post_list.html", context)
 
-@login_required()
+@login_required(login_url='posts:signin')
 def post_update(request, slug=None):
     # if not request.user.is_staff or not request.user.is_superuser:
     #     raise Http404
@@ -100,7 +97,7 @@ def post_update(request, slug=None):
         }
     return render(request,"post_form.html",context) 
 
-@login_required()
+@login_required(login_url='posts:signin')
 def post_delete(request, slug=None):
     # if not request.user.is_staff or not request.user.is_superuser:
     #     raise Http404
