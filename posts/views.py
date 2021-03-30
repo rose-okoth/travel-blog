@@ -15,6 +15,9 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 @login_required(login_url='posts:signin')
 def post_create(request):
+
+    '''Create post function'''
+
     form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         instance = form.save(commit=False)
@@ -29,6 +32,9 @@ def post_create(request):
 
 @login_required(login_url='posts:signin')
 def post_detail(request,slug=None):
+
+    '''Viewing post details function'''
+
     instance = get_object_or_404(Post, slug=slug)
     share_string = quote_plus(instance.content)
     context = {
@@ -40,6 +46,9 @@ def post_detail(request,slug=None):
     return render(request,"post_detail.html",context)
 
 def post_list(request):
+
+    '''Listing posts function'''
+
     today = timezone.now().date()
     # queryset_list = Post.objects.filter(draft=False).filter(publish__lte=timezone.now())
     queryset_list = Post.objects.active().order_by("-timestamp")
@@ -78,6 +87,9 @@ def post_list(request):
 
 @login_required(login_url='posts:signin')
 def post_update(request, slug=None):
+
+    '''Updating posts function'''
+
     instance = get_object_or_404(Post, slug=slug)
     form = PostForm(request.POST or None, request.FILES or None, instance=instance)
     if form.is_valid():
@@ -94,12 +106,18 @@ def post_update(request, slug=None):
 
 @login_required(login_url='posts:signin')
 def post_delete(request, slug=None):
+
+    '''Deleting posts function'''
+
     instance = get_object_or_404(Post, slug=slug)
     instance.delete()
     messages.success(request, "Successfully Deleted!")
     return redirect("posts:home")
 
 def post_signup(request):
+
+    '''User signup function'''
+
     if request.method == 'POST':
         form = RegistrationForm(request.POST or None)
 
@@ -125,6 +143,9 @@ def post_signup(request):
 
 
 def post_signin(request):
+
+    '''User signin function'''
+
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -147,5 +168,8 @@ def post_signin(request):
     return render(request, 'login.html')
 
 def post_logout(request):
+
+    '''User logout function'''
+
     logout(request)
     return redirect('posts:signin')

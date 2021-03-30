@@ -17,6 +17,9 @@ def upload_location(instance, filename):
     return "%s/%s" %(instance.id, filename)
 
 class Post(models.Model):
+
+    '''Post model for the blog posts'''
+    
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
     title = models.CharField(max_length=150)
     slug = models.SlugField(unique=True)
@@ -47,6 +50,9 @@ class Post(models.Model):
         ordering = ["-timestamp", "-updated"]
 
 def create_slug(instance, new_slug=None):
+
+    '''Create slug function'''
+
     slug = slugify(instance.title)
     if new_slug is not None:
         slug = new_slug
@@ -59,6 +65,9 @@ def create_slug(instance, new_slug=None):
 
 
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
+
+    '''Save slug function'''
+
     if not instance.slug:
         instance.slug = create_slug(instance)
 
