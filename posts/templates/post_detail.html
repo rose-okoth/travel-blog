@@ -37,6 +37,10 @@
     <div class='col-sm-12'>
     
     {{ instance.content | linebreaks }}
+
+    <button type="button"> <a href='{% url "posts:update" instance.slug %}' class ="btn btn-success">Edit</a></button>
+    <button type="button"> <a href='{% url "posts:delete" instance.slug %}' class ="btn btn-danger">Delete</a></button>
+
     
     <hr/>
     <br/>
