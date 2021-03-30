@@ -4,6 +4,7 @@ from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from django.conf import settings
 from django.utils import timezone
+from cloudinary.models import CloudinaryField
 import datetime
 
 
@@ -19,7 +20,8 @@ class Post(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
     title = models.CharField(max_length=150)
     slug = models.SlugField(unique=True)
-    image = models.ImageField(upload_to=upload_location,
+    image = CloudinaryField(
+            # upload_to=upload_location,
             null=True, 
             blank=True, 
             height_field='height_field', 

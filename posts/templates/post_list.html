@@ -32,7 +32,9 @@
                   <!-- <p><a href='{{ obj.get_absolute_url }}' class="btn btn-primary" role="button">View</a></p> -->
                   
                   <button type="button"> <a href='{{ obj.get_absolute_url }}' class ="btn btn-info">Read More</a></button>
-                 
+                  <button type="button"> <a href='{% url "posts:update" obj.slug %}' class ="btn btn-success">Edit</a></button>
+                  <button type="button"> <a href='{% url "posts:delete" obj.slug %}' class ="btn btn-danger">Delete</a></button>
+
                 </div>
               </div>
             </div>
